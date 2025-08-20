@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eattogo.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="30,0" Spacing="3">
+            <!-- Name input -->
+            <Label x:Name="labelName" Text="Food's Name" Margin="0,20,0,0"/>
+            <Entry x:Name="inputName" />
+
+            <!-- Serving Size input -->
+            <Label x:Name="labelServingSize" Text="Serving Size" />
+            <Entry x:Name="inputServingSize" Keyboard="Numeric" />
+
+            <!-- Protein (Grams) input -->
+            <Label x:Name="labelProtein" Text="Protein" />
+            <Entry x:Name="inputProtein" Placeholder="(Grams)" Keyboard="Numeric" />
+
+            <!-- Carbohydrates (Grams) input -->
+            <Label x:Name="labelCarbs" Text="Carbs" />
+            <Entry x:Name="inputCarbs" Placeholder="(Grams)" Keyboard="Numeric" />
+
+            <!-- Fat (Grams) input -->
+            <Label x:Name="labelFat" Text="Fat" />
+            <Entry x:Name="inputFat" Placeholder="(Grams)" Keyboard="Numeric" />
+
+            <!-- Buttons for Add and Clear -->
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Button x:Name="calculateButton" Text="Calculate" HorizontalOptions="FillAndExpand"
+                        HeightRequest="60" WidthRequest="100" BackgroundColor="LightSalmon" TextColor="Black"
+                        Margin="0,0,10,0" Clicked="OnCalculateFood"/>
+                <Button x:Name="clearButton" Text="Clear" HorizontalOptions="FillAndExpand"
+                        HeightRequest="60" WidthRequest="100" BackgroundColor="LightSalmon" TextColor="Black"
+                        Margin="10,0,0,0" Clicked="OnReset"/>
+            </HorizontalStackLayout>
+
+            <!-- Display for total calories -->
+            <StackLayout HorizontalOptions="Center">
+                <Label x:Name="labelTotalCalories" Text="Total Calories" HorizontalOptions="Center" Margin="0,20,0,0"/>
+                <Label x:Name="outputCalories" Text="Calories Output Will Be Printed Here" FontAttributes="Bold"/>
+            </StackLayout>
+            <StackLayout HorizontalOptions="FillAndExpand">
+                <Button x:Name="saveButton" Text="Save" VerticalOptions="CenterAndExpand" BackgroundColor="LightSalmon" TextColor="Black"
+                        Margin="0,20,0,0" Clicked="OnSaveRecord"/>
+            </StackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

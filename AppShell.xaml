@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Eattogo.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Eattogo"
+    Shell.FlyoutBehavior="Flyout"
+    Shell.BackgroundColor="Grey"
+    Shell.TitleColor="White"
+    
+    
+    Title="Eattogo">
+    <Shell.FlyoutHeader>
+        <VerticalStackLayout>
+            <Label Text="MENU LIST" HeightRequest="50" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"></Label>
+        </VerticalStackLayout>
+    </Shell.FlyoutHeader>
+
+    <ShellContent
+        Title="Food Calories Calculator"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <ShellContent
+         Title="Calories Intake Calculator"
+         ContentTemplate="{DataTemplate local:CaloriesIntake}"
+         Route="CaloriesIntake" />
+
+    <ShellContent
+        Title="Record"
+        ContentTemplate="{DataTemplate local:Record}"
+        Route="Record" />
+        
+    <ShellContent
+        Title="Information"
+        ContentTemplate="{DataTemplate local:Information}"
+        Route="Information" />
+
+
+</Shell>

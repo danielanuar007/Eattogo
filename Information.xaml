@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Eattogo.Information"
+             Title="Information Screen">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="20" Padding="30">
+
+            <!-- Company Logo -->
+            <Image Source="logo.png" Aspect="AspectFit" HorizontalOptions="Center"/>
+
+            <!-- System's Information -->
+            <Label Text="System's Information" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Eattogo Lifestyle is an application to check the calories on a single plate food. This application will 
+                        summarise the calories consumed for a day and also notify the user about the calorie intake taken for the entire day. The application has features to calculate the calories required for a day based on 
+                        the basal metabolic rate (BMR)" 
+                   HorizontalOptions="Center"/>
+
+            <!-- Developed by Signature -->
+            <Label Text="Developed by:" 
+                   FontAttributes="Bold" 
+                   HorizontalOptions="Center"/>
+
+            <Label Text="Muhammad Aliff Daniel Bin Khairul Anuar" 
+                   HorizontalOptions="Center"/>
+
+            <!-- Additional Information -->
+            <Label Text="This page is protected by PIPD" 
+                   FontSize="Small" 
+                   HorizontalOptions="Center"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
